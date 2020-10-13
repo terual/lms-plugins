@@ -38,11 +38,11 @@ for my $url (sort keys %{$include->{'repository'}}) {
 	my $resp = $ua->get($url);
 	my $content;
 
-	if ($resp->is_success) {
+	if (!$resp->is_success) {
 		
 		warn "error fetching $url - " . $resp->status_line . "\n";
 
-		if ($resp->code == 200) {
+		if ($resp->code == 500) {
 			$resp = $cache->get($url);
 			
 			if ($resp) {
