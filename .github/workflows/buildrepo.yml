@@ -7,8 +7,8 @@ jobs:
     name: Build repo
     runs-on: ubuntu-latest
     steps:
-      - name: Install Cache::Cache
-        run: sudo apt-get install -y libcache-cache-perl
+      - name: Install Perl modules
+        run: sudo apt-get install -y libxml-simple-perl libcache-cache-perl
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run buildrepo.pl
