@@ -49,7 +49,7 @@ for my $url (sort keys %{$include->{'repository'}}) {
 			$content = $cache->get($url);
 			
 			# Invalidate pipeline if cache has expired
-			if (!$content)
+			if (!$content) {
 				die "cache miss...\n";
 			}
 		}
