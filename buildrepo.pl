@@ -17,7 +17,9 @@ my $include = eval {
 } || die "$@";
 
 my $cache = CHI->new( driver => 'File', root_dir => 'cache' );
-my $expires_in = 60*60*24;
+
+# Invalidate cache after 7 days
+my $expires_in = 60*60*24*7;
 
 my $ua = LWP::UserAgent->new(
 	timeout => 5,
@@ -44,17 +46,18 @@ for my $url (sort keys %{$include->{'repository'}}) {
 		warn "error fetching $url - " . $resp->status_line . "\n";
 
 		if ($resp->code == 500) {
-			$resp = $cache->get($url);
+			$content = $cache->get($url);
 			
-			if ($resp) {
-				$content = $resp->content;
-			} else {
-				warn "cache miss...\n";
+			# Invalidate pipeline if cache has expired
+			if (!$content)
+				die "cache miss...\n";
 			}
 		}
 	} else {
-		$cache->set($url, $resp, $expires_in);
 		$content = $resp->content;
+		
+		# Place $content instead of $resp in cache to minimize diffs
+		$cache->set($url, $content, $expires_in);
 	}
 
 	if ($content) {
