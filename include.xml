@@ -1,0 +1,102 @@
+<!-- This file defines the extensions which are included in the 3rd Party Extensions Repos 
+	 Run the buildrepo.pl script in the same directory as this file to build the repo files -->
+
+<extensions>
+
+  <output filter="recommended" file="repo.xml">
+	<details>
+	  <title lang="EN">Recommended 3rd party plugins</title>
+	  <title lang="DE">Empfohlene Erweiterungen anderer Anbieter</title>
+	  <title lang="FR">Extensions recommandées</title>
+	</details>
+  </output>
+  
+  <output filter="other" file="other.xml">
+	<details>
+	  <title lang="DE">Weitere Erweiterungen anderer Anbieter</title>
+	  <title lang="EN">Other 3rd party plugins</title>
+	</details>
+  </output>
+	
+  <repository url="http://triodeplugins.herger.net/repo.xml">
+	<recommended name="InfoBrowserSlimForums" />
+	<recommended name="BBCRadio" />
+  </repository>
+  
+  <repository url="http://www.herger.net/slim-plugins/repo.xml">
+	<recommended name="MusicInfoSCR" />
+	<recommended name="Spotty" />
+  </repository>
+  
+  <repository url="http://pluginrepository.penguinlovesmusic.de/pluginrepo.xml">
+	<recommended name="PlaylistMan" />
+  </repository>
+  
+  <repository url="http://www.gwendesign.com/sc/repo/repo.xml">
+	<recommended name="IRBlaster" />
+  </repository>
+  
+  <repository url="https://erland.github.io/squeezebox-downloads/repositories/latest.xml">
+	<recommended name="TitleSwitcher" />
+	<recommended name="TrackStat" />
+	<recommended name="CustomSkip" />
+	<recommended name="DynamicPlayList" />
+	<recommended name="DaylightClock" />
+  </repository>
+  
+  <repository url="http://www.hickinbottom.com/sc-plugins/repo.xml">
+	<recommended name="LazySearch2" />
+  </repository>
+
+  <repository url="http://www.radiofeeds.co.uk/mypicks/repo.xml" />
+  <repository url="https://benklaas.com/fontreplacer/repo.xml" />
+  <repository url="http://www.spicefly.com/media/scube4x/install.xml" />
+  <repository url="https://tuxreborn.netlify.com/slim/slim7/repodata.xml" />
+  <repository url="https://raw.githubusercontent.com/terual/DSDPlayer/master/repo.xml" />
+<!--
+the following is a collection of Peter's plugins mirrored
+  <repository url="http://www.spicefly.com/legacy_plugins/repo.xml" />
+-->
+  <repository url="https://bitflip.net/slim/repo.xml" />
+  <repository url="https://master.dl.sourceforge.net/project/bpaplugins/OtherPlugins/bpapluginsrepo.xml" />
+  <repository url="http://www.erspearson.com/xAP/Slim/Updates.xml" />
+  <repository url="http://slimscrobbler.sourceforge.net/repository.xml" />
+  <repository url="http://www.stagessound.de/bluegaspode.xml" />
+  <repository url="http://server.vijge.net/static/squeezebox/repo.xml" />
+  <repository url="http://daduke.org/dl/lms-wefunk/repo.xml" />
+  <repository url="https://www.nexus0.net/pub/sw/extgui4lms/repo.xml" />
+  <repository url="http://mjohnen.bplaced.net/repo/repo.xml" />
+  <repository url="https://netcologne.dl.sourceforge.net/project/sdt-weather-com/repo.xml" />
+  <repository url="http://github.com/bossanova808/repository.squeeze.bossanova808/raw/master/staging/repo.xml" />
+  <repository url="https://netcologne.dl.sourceforge.net/project/lms-plugins-philippe44/repo-sf.xml" />
+  <repository url="http://superdatetimewu.sourceforge.net/CC_JL_repo.xml" />
+  <repository url="http://adhawkins.github.io/SimpleLibraryViews/repo.xml" />
+  <repository url="http://ralph.irving.sdf.org/edo/edo-repo.xml" />
+  <repository url="http://www.dabdig.co.uk/slimserver-rep/repo.xml" />
+  <repository url="http://marcoc1712.it/downloads/repository.xml" />
+  <repository url="https://www.neversimple.eu/LMS/repodata.xml" />
+  <repository url="https://raw.githubusercontent.com/CDrummond/lms-material/master/public.xml">
+    <recommended name="MaterialSkin" />
+  </repository>
+  <repository url="https://raw.githubusercontent.com/aesculus/denonavpcontrol/master/repo.xml" />
+  <repository url="https://foobarjo.org/LMS/foobarjo-stable.xml" />
+<!--
+  <repository url="http://grebrown-projects.googlecode.com/svn/repo.xml">
+	<recommended name="SuperDateTime" />
+  </repository>
+
+  <repository url="http://www.koldware.net/SlimStuff/repodata.xml" />
+  <repository url="http://www.whizziwig.com/static/squeezecloud/public.xml" />
+  <repository url="http://petherton.pwp.blueyonder.co.uk/SlimServer/repository.xml" />
+  <repository url="http://richiezed.com/squeezefamily/repo.xml" />
+  <repository url="http://mrw-plugins.googlecode.com/svn/trunk/repo.xml" />
+  <repository url="http://mrthreeplates.googlecode.com/svn/LMS-plugins/repo.xml" />
+  <repository url="http://mdmplugins.googlecode.com/svn/trunk/repo.xml" />
+  <repository url="http://squeezecenter-seeqpod.googlecode.com/svn/trunk/repodata.xml" />
+  <repository url="http://triodeplugins.googlecode.com/svn/trunk/repo.xml">
+  <repository url="http://kdfplugins.googlecode.com/svn/trunk/repo.xml" />
+  <repository url="http://weathertime.googlecode.com/svn/trunk/repo.xml" />
+  <repository url="http://ampache-squeezecenter.googlecode.com/svn/tags/repo.xml" />
+-->
+</extensions>
+
