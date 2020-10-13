@@ -2,7 +2,7 @@
 
 use strict;
 
-use CHI;
+use Cache::FileCache;
 use LWP::UserAgent;
 use XML::Simple;
 use Data::Dumper;
@@ -16,7 +16,7 @@ my $include = eval {
 		  ) 
 } || die "$@";
 
-my $cache = CHI->new( driver => 'File', root_dir => 'cache');
+my $cache = new Cache::FileCache( );
 
 my $ua = LWP::UserAgent->new(
 	timeout => 5,
