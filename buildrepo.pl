@@ -17,6 +17,7 @@ my $include = eval {
 } || die "$@";
 
 my $cache = new Cache::FileCache( );
+my $expires_in = 60*60*24;
 
 my $ua = LWP::UserAgent->new(
 	timeout => 5,
@@ -52,7 +53,7 @@ for my $url (sort keys %{$include->{'repository'}}) {
 			}
 		}
 	} else {
-		$cache->set($url, $resp, { expires_in => 60*60*24 });
+		$cache->set($url, $resp, $expires_in);
 		$content = $resp->content;
 	}
 
