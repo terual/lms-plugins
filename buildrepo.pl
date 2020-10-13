@@ -49,7 +49,7 @@ for my $url (sort keys %{$include->{'repository'}}) {
 			if ($resp) {
 				$content = $resp->content;
 			} else {
-				die "cache miss...\n";
+				warn "cache miss...\n";
 			}
 		}
 	} else {
