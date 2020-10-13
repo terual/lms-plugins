@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Perl modules
-        run: sudo apt-get install -y libxml-simple-perl libcache-cache-perl
+        run: sudo apt-get install -y libxml-simple-perl libchi-perl
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run buildrepo.pl
