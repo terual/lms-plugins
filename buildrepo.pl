@@ -2,7 +2,7 @@
 
 use strict;
 
-use Cache::FileCache;
+use CHI;
 use LWP::UserAgent;
 use XML::Simple;
 use Data::Dumper;
@@ -16,7 +16,7 @@ my $include = eval {
 		  ) 
 } || die "$@";
 
-my $cache = new Cache::FileCache( );
+my $cache = CHI->new( driver => 'File', root_dir => 'cache' );
 my $expires_in = 60*60*24;
 
 my $ua = LWP::UserAgent->new(
